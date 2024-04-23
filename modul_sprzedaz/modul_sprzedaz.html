@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moduł Sprzedaż</title>
+    <link rel="stylesheet" href="../main.css" />
+    <script src="../components/handleTabs.js" defer></script>
+    <script src="../components/handleFormSubmit.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <a href="../index.html"><button>Powrót</button></a>
+    <main>
+      <button class="tab-trigger">Dodaj</button>
+      <button class="tab-trigger">Wyświetl</button>
+      <button class="tab-trigger">Aktualizuj</button>
+      <button class="tab-trigger">Usuń</button>
+      <button class="tab-trigger">Transakcja największe przychody</button>
+      <button class="tab-trigger">Produkt największe przychody</button>
+      <button class="tab-trigger">Liczba transakcji między datami</button>
+      <button class="tab-trigger">Suma cen transakcji między datami</button>
+
+      <div class="tab-content">
+        <form method="post" name="crud/addTransaction">
+          <select name="productInput">
+            <option value="">Produkt</option>
+            <option value="Produkt1">Produkt1</option>
+            <option value="Produkt2">Produkt2</option>
+          </select>
+          <input type="number" name="priceInput" placeholder="Cena" />
+          <input type="date" name="dateInput" />
+          <button type="submit">Dodaj</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="crud/getTransactions">
+          <button type="submit">Wyświetl</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="crud/updateTransaction">
+          <input type="text" name="idInput" placeholder="Identyfikator" />
+          <select name="productInput">
+            <option value="">Produkt</option>
+            <option value="Produkt1">Produkt1</option>
+            <option value="Produkt2">Produkt2</option>
+          </select>
+          <input type="number" name="priceInput" placeholder="Cena" />
+          <input type="date" name="dateInput" />
+          <button type="submit">Aktualizuj</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="crud/deleteTransaction">
+          <input type="text" name="idInput" placeholder="Identyfikator" />
+          <button type="submit">Usuń</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getMostRevenueTransaction">
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getMostRevenueProduct">
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getCountTransactionsBetweenTwoDates">
+          <input type="date" name="date1" />
+          <input type="date" name="date2" />
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getSumTransactionsBetweenTwoDates">
+          <input type="date" name="date1" />
+          <input type="date" name="date2" />
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

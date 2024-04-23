@@ -1,0 +1,9 @@
+65c40acf0f21c,test,2024-01-23,Department2,Uprawnienia1
+65c40acf35808,test,2024-01-23,Department2,Uprawnienia1
+65c40acf5ab3e,test,2024-01-23,Department2,Uprawnienia1
+65c40ad11e734,test,2024-01-23,Department2,Uprawnienia2
+65c40ad142e88,test,2024-01-23,Department2,Uprawnienia2
+65c4d5b84c43e,,2024-02-15,,
+65c4d5b86ddc7,,2024-02-15,,
+65c4d5b892c93,,2024-02-15,,
+65c4d5b8aefad,,2024-02-15,,

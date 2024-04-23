@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moduł CRM</title>
+    <link rel="stylesheet" href="../main.css" />
+    <script src="../components/handleTabs.js" defer></script>
+    <script src="../components/handleFormSubmit.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <a href="../index.html"><button>Powrót</button></a>
+
+    <main>
+      <button class="tab-trigger">Dodaj</button>
+      <button class="tab-trigger">Wyświetl</button>
+      <button class="tab-trigger">Aktualizuj</button>
+      <button class="tab-trigger">Usuń</button>
+      <button class="tab-trigger">Pobierz</button>
+
+      <div class="tab-content">
+        <form method="post" name="addUser">
+          <input type="text" name="nameInput" placeholder="Imię" />
+          <input type="email" name="emailInput" placeholder="Email" />
+          <select name="statusInput">
+            <option value="">Status</option>
+            <option value="aktywna">Aktywna</option>
+            <option value="nieaktywna">Nieaktywna</option>
+            <option value="wstrzymana">Wstrzymana</option>
+          </select>
+          <button type="submit">Dodaj</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getUsers">
+          <button type="submit">Wyświetl</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="updateUser">
+          <input type="text" name="idInput" placeholder="Identyfikator" />
+          <input type="text" name="nameInput" placeholder="Imię" />
+          <input type="email" name="emailInput" placeholder="Email" />
+          <select name="statusInput">
+            <option value="">Status</option>
+            <option value="aktywna">Aktywna</option>
+            <option value="nieaktywna">Nieaktywna</option>
+            <option value="wstrzymana">Wstrzymana</option>
+          </select>
+          <button type="submit">Aktualizuj</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="deleteUser">
+          <input type="text" name="idInput" placeholder="Identyfikator" />
+          <button type="submit">Usuń</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getEmails">
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

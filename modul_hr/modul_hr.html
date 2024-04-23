@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moduł HR</title>
+    <link rel="stylesheet" href="../main.css" />
+    <script src="../components/handleTabs.js" defer></script>
+    <script src="../components/handleFormSubmit.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <a href="../index.html"><button>Powrót</button></a>
+    <main>
+      <button class="tab-trigger">Dodaj</button>
+      <button class="tab-trigger">Wyświetl</button>
+      <button class="tab-trigger">Aktualizuj</button>
+      <button class="tab-trigger">Usuń</button>
+      <button class="tab-trigger">Najstarszy i najmłodszy</button>
+      <button class="tab-trigger">Średni wiek</button>
+      <button class="tab-trigger">Urodziny w ciągu 2 tyg</button>
+      <button class="tab-trigger">Określony poziom uprawnień</button>
+      <button class="tab-trigger">Liczba pracowników na oddział</button>
+
+      <div class="tab-content">
+        <form method="post" name="crud/addEmployee">
+          <input type="text" name="nameInput" placeholder="Imię i nazwisko" />
+          <input type="date" name="birthdayInput" />
+          <select name="departmentInput">
+            <option value="">Oddział</option>
+            <option value="Department1">Oddział1</option>
+            <option value="Department2">Oddział2</option>
+          </select>
+          <select name="permissionInput">
+            <option value="">Uprawnienia</option>
+            <option value="Uprawnienia1">Uprawnienia1</option>
+            <option value="Uprawnienia2">Uprawnienia2</option>
+          </select>
+          <button type="submit">Dodaj</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="crud/getEmployees">
+          <button type="submit">Wyświetl</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="crud/updateEmployee">
+          <input type="text" name="idInput" placeholder="Identyfikator" />
+          <input type="text" name="nameInput" placeholder="Imię i nazwisko" />
+          <select name="departmentInput">
+            <option value="">Oddział</option>
+            <option value="Department1">Oddział1</option>
+            <option value="Department2">Oddział2</option>
+          </select>
+          <select name="permissionInput">
+            <option value="">Uprawnienia</option>
+            <option value="Uprawnienia1">Uprawnienia1</option>
+            <option value="Uprawnienia2">Uprawnienia2</option>
+          </select>
+          <button type="submit">Aktualizuj</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="crud/deleteEmployee">
+          <input type="text" name="idInput" placeholder="Identyfikator" />
+          <button type="submit">Usuń</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getOldestYoungestEmployee">
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getAverageAgeEmployees">
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getNameEmployeeByBirthday">
+          <input type="date" name="dateInput" />
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getEmployeesMinPermissions">
+          <select name="permissionInput">
+            <option value="">Uprawnienia</option>
+            <option value="Uprawnienia1">Uprawnienia1</option>
+            <option value="Uprawnienia2">Uprawnienia2</option>
+            <option value="Uprawnienia3">Uprawnienia3</option>
+          </select>
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+
+      <div class="tab-content">
+        <form method="post" name="getEmployeesCountByDep">
+          <button type="submit">Pobierz</button>
+          <div class="output"></div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

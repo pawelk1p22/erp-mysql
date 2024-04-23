@@ -1,0 +1,8 @@
+65c0b1f4904fe,czapin,czapinek@wp.pl,active
+65c0b21d54075,,,aktywna
+65c0b220266fb,czapin,asdf@gmail.com,wstrzymana
+65c0bfbf999d1,,,
+65c0bfbfbd216,,,nieaktywna
+65c0bfbfdf85d,,,nieaktywna
+65c0bfc00f34f,,,
+65c0bfc03157b,,,aktywna
